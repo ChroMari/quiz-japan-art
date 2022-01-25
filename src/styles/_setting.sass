@@ -1,0 +1,166 @@
+.setting
+  transform: translateX(100%)
+  @extend %transition
+
+.setting.setting-active
+  transform: translateX(0)
+
+.setting__title
+  font-weight: normal
+  font-size: 30px
+  line-height: 25px
+  padding-bottom: 20px
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+  margin-bottom: 40px
+
+.setting__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 50px
+  @include media-desktop-850
+    flex-direction: column
+    align-items: flex-start
+    & div + div
+      margin-top: 20px
+
+.setting__text
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  margin-bottom: 20px
+
+.setting__row
+  display: flex
+  align-items: center
+
+.setting__button-volume
+  cursor: pointer
+  width: 35px
+  height: 35px
+  position: relative
+  margin-right: 15px
+
+  svg
+    width: 35px
+    height: 35px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+
+    path
+      @extend %transition
+
+    &:hover
+      path
+        fill: #8A67F7
+
+.svg-volume
+  left: 10% !important
+
+.setting__range
+  height: 3px
+  width: 350px
+  display: block
+  appearance: none
+  outline: none
+  transition: 0.3s
+  cursor: pointer
+  @include media-desktop-650
+    width: 250px
+
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    height: 15px
+    width: 15px
+    border-radius: 50%
+    background: #fff
+    cursor: pointer
+    @extend %transition
+
+    &:hover
+      background: #49447F
+
+.switch
+  position: relative
+  display: inline-block
+  width: 60px
+  height: 34px
+
+  input
+    opacity: 0
+    width: 0
+    height: 0
+
+.slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #ccc
+  -webkit-transition: .4s
+  transition: .4s
+  width: 57px
+  height: 28px
+
+  &:before
+    position: absolute
+    content: ""
+    height: 20px
+    width: 20px
+    left: 4px
+    bottom: 4px
+    background-color: white
+    -webkit-transition: .4s
+    transition: .4s
+    @extend %transition
+    cursor: pointer
+
+  &:hover::before
+    background-color: #49447F
+
+input:checked + .slider
+  background-color: #8A67F7
+
+input:focus + .slider
+  box-shadow: 0 0 1px #8A67F7
+
+input:checked + .slider:before
+  -webkit-transform: translateX(26px)
+  -ms-transform: translateX(26px)
+  transform: translateX(26px)
+
+.slider.round
+  border-radius: 34px
+
+  &:before
+    border-radius: 50%
+
+.setting__text-game
+  margin-right: 35px
+
+.setting__button
+  width: 25px
+  height: 25px
+  border-radius: 50%
+  background-color: #8A67F7
+  box-shadow: inset 0px -5px 0px #5B36A8
+  color: #fff
+  font-size: 18px
+  font-weight: 400
+  cursor: pointer
+  @extend %transition
+
+  &:hover
+    box-shadow: inset 0px 0px 0px #5B36A8
+
+.setting__text-time
+  margin: 0 15px 0 15px
+
+.settings__buttons
+  display: flex
+  justify-content: space-around

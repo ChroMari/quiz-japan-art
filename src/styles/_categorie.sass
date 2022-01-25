@@ -1,0 +1,122 @@
+.categorie
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+.categorie-card
+  width: calc(100% / 5 - 20px)
+  height: 350px
+  border-radius: 15px
+  overflow: hidden
+  position: relative
+  margin-bottom: 30px
+
+  opacity: 0
+  transform: translateY(100%) scale(0.2)
+  @extend %transition
+
+  @include media-desktop-1150
+    width: calc(100% / 3 - 20px)
+  @include media-desktop-750
+    width: calc(100% / 2 - 20px)
+  @include media-desktop-500
+    width: calc(100%)
+
+.categorie-card.active-animation
+  transform: translateY(0) scale(1)
+  opacity: 1
+
+.categorie-card__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+  filter: grayscale(100%)
+  border-radius: 19px
+  cursor: pointer
+
+  &.active
+    filter: grayscale(0%)
+
+  &:hover ~ .categorie-card__play
+    opacity: 1
+
+.scoor-card__img
+  width: 100%
+  height: 100%
+  object-fit: cover
+  filter: grayscale(100%)
+  border-radius: 19px
+  position: relative
+
+  &.active
+    filter: grayscale(0%)
+    cursor: pointer
+
+.categorie-card__play
+  position: absolute
+  padding: 15px 0
+  bottom: 0
+  left: 0
+  width: 100%
+  background-color: #49447F
+  font-size: 16px
+  font-weight: 600
+  cursor: pointer
+  color: #fff
+  opacity: 0
+  @extend %transition
+
+.categorie-card__info
+  position: absolute
+  top: 0
+  width: 24%
+  left: 20%
+  transform: translateX(-50%)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px 15px
+  background-color: #8D86A6
+  border-radius: 0px 0px 35px 35px
+
+  &.active
+    width: 80%
+    left: 50%
+    background-color: #7DADC8
+    cursor: pointer
+
+.categorie-card__title
+  font-weight: 900
+  font-size: 25px
+  line-height: 29px
+  color: #1B1C54
+
+.categorie-card__button
+  font-weight: 500
+  font-size: 18px
+  line-height: 22px
+
+.categorie-card__text
+  font-weight: normal
+  font-size: 16px
+  line-height: 21px
+  color: #49447F
+
+.categorie_error
+  position: relative
+
+.card-error
+  position: absolute
+  background-color: #d48686
+  top: 0
+  left: 50%
+  transform: translate(-50%, -50%)
+  padding: 20px 25px
+  border-radius: 13px
+
+.card-error__text
+  text-align: center
+  color: #fff
+  font-weight: 500
+  font-size: 18px

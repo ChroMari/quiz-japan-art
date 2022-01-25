@@ -1,0 +1,37 @@
+$color-text: #fff
+
+%transition
+  transition: all .3s ease
+
+@mixin media-desktop-1150
+  @media (max-width: 1150px)
+    @content
+
+@mixin media-desktop-850
+  @media (max-width: 850px)
+    @content
+
+@mixin media-desktop-750
+  @media (max-width: 750px)
+    @content
+
+@mixin media-desktop-650
+  @media (max-width: 650px)
+    @content
+
+@mixin media-desktop-500
+  @media (max-width: 500px)
+    @content
+
+@import "./styles/reset"
+@import "./styles/body"
+@import "./styles/app"
+@import "./styles/wrapper"
+@import "./styles/header"
+@import "./styles/buttons"
+@import "./styles/home"
+@import "./styles/setting"
+@import "./styles/categorie"
+@import "./styles/game"
+@import "./styles/footer"
+@import "./styles/popup"

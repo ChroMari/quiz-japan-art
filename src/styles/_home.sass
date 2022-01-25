@@ -1,0 +1,56 @@
+.home
+  display: flex
+  flex-direction: column
+  align-items: center
+  min-height: calc(100vh - 180px)
+
+.home__images
+  width: 800px
+  height: 400px
+  position: relative
+  margin: auto
+  margin-bottom: 30px
+  transform: translateX(0px)
+  @extend %transition
+  @include media-desktop-850
+    width: 600px
+    height: 300px
+  @include media-desktop-650
+    width: 300px
+    height: 150px
+
+.home__images.active
+  transform: translateX(-100%)
+
+.img-scene
+  width: 100%
+  height: 100%
+  object-fit: cover
+  position: absolute
+  top: 0
+  left: 0
+
+.img-personage
+  clip-path: polygon(60% 0, 100% 0%, 100% 100%, 40% 100%)
+  @extend %transition
+
+.img-personage.active-person
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%)
+
+.img-personage.active-scene
+  clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%)
+
+.home__buttons
+  display: flex
+  justify-content: space-around
+  width: 800px
+  transform: translateX(0px)
+  margin: auto
+  @extend %transition
+  @include media-desktop-850
+    width: 600px
+  @include media-desktop-650
+    width: 300px
+
+.home__buttons.active
+  transform: translateX(100%)

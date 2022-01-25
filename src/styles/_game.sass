@@ -1,0 +1,109 @@
+.game__title
+  text-align: center
+  margin-bottom: 25px
+  font-size: 20px
+  font-weight: 400
+
+.game__wrapper
+  display: flex
+  justify-content: space-around
+  align-items: center
+  @include media-desktop-750
+    flex-direction: column
+
+.game__big-img
+  width: 300px
+  height: 300px
+  object-fit: cover
+  border-radius: 35px
+
+.game__answers
+  width: calc(100% / 2 - 50px)
+  @include media-desktop-750
+    margin-top: 25px
+    width: 100%
+
+.game__answers-img
+  width: 100%
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  @include media-desktop-750
+    flex-direction: column
+
+.game__answer-img
+  border: 5px solid transparent
+
+.game__answers-img_yes
+  border-color: #245F4C
+
+.game__answers-img_error
+  border-color: #DE4352
+
+.game__answer
+  background-color: #49447F
+  border-radius: 30px
+  font-size: 18px
+  font-weight: 600
+  color: #fff
+  padding: 15px 0
+  text-align: center
+  margin-bottom: 15px
+  cursor: pointer
+
+.game__answer-img
+  height: 200px
+  object-fit: cover
+  border-radius: 15px
+  width: calc(100% / 2 - 80px)
+  margin-bottom: 30px
+  @include media-desktop-750
+    width: 100%
+
+.game__answer_error
+  background-color: #DE4352
+
+.game__answer_yes
+  background-color: #245F4C
+
+.levels
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 30px
+
+.level
+  margin-left: 20px
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  border: 2px solid #49447F
+  list-style: none
+  @include media-desktop-750
+    width: 15px
+    height: 15px
+    margin-left: 10px
+
+.game__img-one
+  width: 300px
+  height: 300px
+  object-fit: cover
+  border-radius: 15px
+
+.answer__img
+  width: 250px
+  border-radius: 15px
+  margin-bottom: 25px
+  height: auto
+  max-height: 200px
+  object-fit: cover
+
+.answer__title
+  font-size: 18px
+  font-weight: 500
+  text-align: center
+  margin-bottom: 25px
+
+.button__next
+  display: block
+  margin: auto
